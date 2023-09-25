@@ -9,7 +9,7 @@ data Suit = Hearts | Diamonds | Clubs | Spades
 data Rank = Two   | Three | Four | Five | Six  |
             Seven | Eight | Nine | Ten  | Jack |
             King  | Queen | Ace
-            deriving (Show, Enum, Bounded, Eq)
+            deriving (Show, Enum, Ord, Bounded, Eq)
 
 data Card = Card
   { rank :: Rank
