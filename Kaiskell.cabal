@@ -1,0 +1,36 @@
+cabal-version:      2.4
+name:               Kaiskell
+version:            0.1.0.0
+
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Game
+
+    other-modules:    Game.Actions,
+                      Game.Core,
+                      Game.Validation,
+                      Models.Bids,
+                      Models.Cards,
+                      Models.Constants,
+                      Models.Players,
+                      Models.State,
+                      Models.Team,
+                      Utils.Shuffle
+
+    build-depends:    base ^>=4.16.4.0,
+                      array,
+                      random,
+                      containers
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable Kaiskell
+    main-is:          Main.hs
+
+    build-depends:
+        base ^>=4.16.4.0,
+        Kaiskell
+
+    hs-source-dirs:   app
+    default-language: Haskell2010
